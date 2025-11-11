@@ -4,6 +4,8 @@ from starlette.middleware.cors import CORSMiddleware
 from app.core.database import Base, engine
 from app.routers import faq_router
 from app.core.config import settings
+from app.models import faq_model            # existing
+from app.models import question_hit_model
 
 Base.metadata.create_all(bind=engine)
 
